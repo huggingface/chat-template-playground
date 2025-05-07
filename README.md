@@ -1,38 +1,71 @@
-# sv
+---
+title: Chat Template Playground
+emoji: 💻
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 3000
+pinned: false
+license: apache-2.0
+---
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# Chat Template Playground
 
-## Creating a project
+A modern SvelteKit playground for experimenting with chat UIs, templates, and interactive components.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 📦 Installing Dependencies
+
+Install the project dependencies before starting development:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
+# or
+yarn install
+# or
+pnpm install
 ```
 
-## Developing
+## 💻 Developing Locally
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start a development server with hot reload:
 
 ```bash
 npm run dev
-
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev -- --open
 ```
 
-## Building
+## 🏗️ Building for Production
 
-To create a production version of your app:
+To create a production build:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the production build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+npm run preview
+```
+
+> **Note:** To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## 🧰 Tech Stack
+
+- [SvelteKit](https://kit.svelte.dev/)
+- [Vite](https://vitejs.dev/)
+- [sv](https://github.com/sveltejs/cli)
+- [Tailwind CSS](https://tailwindcss.com/) (if enabled)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 📬 Contact
+
+For questions or feedback, please contact the project maintainer.

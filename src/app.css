@@ -1,1 +1,132 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.codemirror-wrapper {
+	@apply overflow-auto text-sm;
+}
+.codemirror-wrapper .cm-editor {
+	@apply bg-transparent;
+}
+.codemirror-wrapper .cm-content {
+	@apply min-h-[12rem] font-mono;
+}
+.codemirror-wrapper .cm-gutter {
+	@apply min-h-[12rem];
+}
+.codemirror-wrapper .cm-gutters {
+	@apply border-gray-200 bg-gray-50 text-gray-400 dark:border-gray-900 dark:bg-gray-900;
+}
+.codemirror-wrapper .cm-line {
+	@apply pl-2 selection:bg-blue-200! dark:bg-gray-900 dark:selection:bg-gray-700!;
+}
+.codemirror-wrapper .cm-activeLine {
+	@apply bg-blue-50 dark:bg-gray-900;
+}
+.codemirror-wrapper .cm-activeLineGutter {
+	@apply bg-blue-100 dark:bg-gray-900;
+}
+.codemirror-wrapper .cm-scroller,
+.codemirror-wrapper .cm-editor.cm-focused {
+	@apply outline-none;
+}
+
+/* Hide codemirror default search component since we have CodeMirrorSearch.svelte */
+.codemirror-wrapper .cm-search {
+	@apply hidden;
+}
+
+@utility btn-base {
+	@apply inline-flex cursor-pointer items-center justify-center rounded-lg border px-3 py-1 whitespace-nowrap select-none focus:ring-3 focus:outline-hidden;
+}
+
+@utility btn {
+	@apply btn-base;
+	@apply border-gray-200 bg-linear-to-b from-white to-gray-100 text-gray-800 hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700 dark:hover:to-gray-950;
+	&:disabled {
+		@apply cursor-not-allowed opacity-50;
+	}
+	&.btn-lg {
+		@apply px-4 py-1.5 font-normal;
+	}
+}
+
+@utility btn-widget {
+	@apply btn-base;
+	@apply h-8 bg-linear-to-b from-gray-50 to-gray-200 hover:from-gray-100 hover:to-gray-200 dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:hover:from-gray-700 dark:hover:to-gray-950;
+	&:disabled {
+		@apply cursor-not-allowed opacity-50;
+	}
+}
+
+@utility btn-warning {
+	@apply btn-base;
+	@apply border-orange-200 bg-linear-to-b from-white to-orange-100 text-orange-700 hover:shadow-inner dark:border-orange-800 dark:from-orange-800 dark:to-orange-900 dark:text-orange-200 dark:hover:from-orange-700 dark:hover:to-orange-900;
+}
+
+@utility btn-green {
+	@apply btn-base;
+	@apply border-green-500 bg-green-500 text-white hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700 dark:hover:to-gray-950;
+}
+
+@utility btn-pink {
+	@apply btn-base;
+	@apply border-red-400 bg-red-400 text-white hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700 dark:hover:to-gray-950;
+}
+
+@utility btn-sky {
+	@apply btn-base;
+	@apply border-sky-600 bg-sky-600 text-white hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700 dark:hover:to-gray-950;
+}
+
+@utility btn-sky-ligher {
+	@apply btn-base;
+	@apply border-sky-500 bg-sky-500 text-white hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700 dark:hover:to-gray-950;
+}
+
+@utility btn-fuchsia {
+	@apply btn-base;
+	@apply border-fuchsia-600 bg-fuchsia-600 text-white hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700;
+}
+
+@utility btn-disabled {
+	@apply cursor-not-allowed opacity-50;
+}
+
+@utility btn-widget-disabled {
+	@apply cursor-not-allowed opacity-50;
+}
+
+@utility btn-lg {
+	&.btn {
+		@apply px-4 py-1.5 font-normal;
+	}
+}
+
+@utility btn-green-lg {
+	@apply px-10 py-2;
+}
+
+@utility btn-fuchsia-lg {
+	@apply px-10 py-2;
+}
+
+@utility tooltip-mask {
+	@apply pointer-events-none absolute overflow-visible bg-transparent;
+}
+@utility tooltip {
+	@apply pointer-events-auto absolute z-50 w-max max-w-44 transform rounded-lg border-black bg-black p-2 text-xs leading-tight font-normal break-words text-white shadow transition-opacity dark:bg-gray-800;
+}
+@utility tooltip-arrow {
+	@apply absolute z-0 size-2 rotate-45 transform bg-black dark:bg-gray-800;
+}
+
+.alert {
+	@apply rounded-md border border-blue-100 bg-blue-50 px-3 py-2 text-blue-900 dark:border-blue-800/30 dark:bg-blue-800/30 dark:text-blue-200;
+}
+.alert a {
+	@apply underline;
+}
+.alert-error {
+	@apply border-red-100 bg-red-50 text-red-900 dark:border-red-800/30 dark:bg-red-800/30 dark:text-red-200;
+}

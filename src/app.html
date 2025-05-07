@@ -6,7 +6,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
+
 	<body data-sveltekit-preload-data="hover">
+		<style>
+			body {
+				background: white;
+			}
+			body.dark {
+				background: #101828;
+			}
+		</style>
+		<script>
+			(function () {
+				const urlParams = new URLSearchParams(window.location.search);
+				const theme = urlParams.get('_theme');
+
+				let systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+				function updateTheme() {
+					if (theme === 'dark') {
+						document.body.classList.add('dark');
+					} else if (theme === 'light') {
+						document.body.classList.remove('dark');
+					} else if (theme === 'system' || theme === null || theme === undefined) {
+						if (systemPrefersDark) {
+							document.body.classList.add('dark');
+						} else {
+							document.body.classList.remove('dark');
+						}
+					}
+				}
+
+				// Initial theme update
+				updateTheme();
+
+				// Listen for system preference changes
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+					systemPrefersDark = event.matches;
+					updateTheme();
+				});
+			})();
+		</script>
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
