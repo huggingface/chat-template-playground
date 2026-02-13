@@ -247,11 +247,11 @@
 
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="hidden h-full w-1 cursor-col-resize items-center justify-center bg-gray-100 select-none hover:bg-blue-200 active:bg-blue-200 sm:flex dark:bg-gray-700 dark:hover:bg-blue-900 dark:active:bg-blue-900"
+		class="hidden h-full w-2 cursor-col-resize items-center justify-center bg-gray-100 select-none hover:bg-blue-200 active:bg-blue-200 sm:flex dark:bg-gray-700 dark:hover:bg-blue-900 dark:active:bg-blue-900"
 		style="left: calc({leftWidth}% - 4px); z-index:10;"
 		on:mousedown={startDragVertical}
 	>
-		<div class="h-12 w-[0.05rem] rounded-full bg-gray-400"></div>
+		<div class="h-12 w-0.5 rounded-full bg-gray-400"></div>
 	</div>
 
 	<div
@@ -274,11 +274,11 @@
 
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class="hidden h-1 w-full cursor-row-resize items-center justify-center bg-gray-100 select-none hover:bg-blue-200 active:bg-blue-200 sm:flex dark:bg-gray-700 dark:hover:bg-blue-900 dark:active:bg-blue-900"
+			class="hidden h-2 w-full cursor-row-resize items-center justify-center bg-gray-100 select-none hover:bg-blue-200 active:bg-blue-200 sm:flex dark:bg-gray-700 dark:hover:bg-blue-900 dark:active:bg-blue-900"
 			style="top: calc({topHeight}% - 4px); z-index:10;"
 			on:mousedown={startDragHorizontal}
 		>
-			<div class="h-[0.05rem] w-12 rounded-full bg-gray-400"></div>
+			<div class="h-0.5 w-12 my-2 rounded-full bg-gray-400"></div>
 		</div>
 
 		<div class="w-full" style="height: {100 - topHeight}%">
