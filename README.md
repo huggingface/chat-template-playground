@@ -18,11 +18,7 @@ A modern SvelteKit playground for experimenting with chat UIs, templates, and in
 Install the project dependencies before starting development:
 
 ```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
+bun install
 ```
 
 ## 💻 Developing Locally
@@ -30,9 +26,9 @@ pnpm install
 Start a development server with hot reload:
 
 ```bash
-npm run dev
+bun run dev
 # or start the server and open the app in a new browser tab
-yarn dev -- --open
+bun run dev --open
 ```
 
 ## 🏗️ Building for Production
@@ -40,23 +36,24 @@ yarn dev -- --open
 To create a production build:
 
 ```bash
-npm run build
+bun run build
 ```
 
 Preview the production build:
 
 ```bash
-npm run preview
+bun run preview
 ```
 
 > **Note:** To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
 ## 🧰 Tech Stack
 
+- [Bun](https://bun.sh/) - Fast JavaScript runtime and package manager
 - [SvelteKit](https://kit.svelte.dev/)
 - [Vite](https://vitejs.dev/)
 - [sv](https://github.com/sveltejs/cli)
-- [Tailwind CSS](https://tailwindcss.com/) (if enabled)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🤝 Contributing
 
