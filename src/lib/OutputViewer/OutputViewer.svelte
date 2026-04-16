@@ -13,16 +13,10 @@
 <div class="h-full overflow-scroll bg-white dark:bg-gray-900">
 	<div class="sticky top-0 z-10 bg-white dark:bg-gray-900">
 		<div
-			class="text-semibold flex items-center gap-x-2 border-b border-gray-500 bg-linear-to-r from-purple-200 to-white px-3 py-1.5 text-lg dark:from-purple-700 dark:to-purple-900 dark:text-gray-200"
+			class="flex items-center gap-x-2 border-b border-gray-200 px-3 py-1.5 dark:border-gray-700"
 		>
-			Rendered Output
-		</div>
-		{#if error}
-			<div class="alert alert-error">
-				{error}
-			</div>
-		{:else}
-			<div class="flex items-center border-b px-3 py-2">
+			<span class="text-xs font-semibold text-gray-800 sm:text-sm dark:text-gray-200">Output</span>
+			{#if !error}
 				<div class="ml-auto flex items-center gap-x-2">
 					<CopyButton
 						label="Copy"
@@ -37,6 +31,11 @@
 						classNames="[&_svg]:text-xs! size-6! p-0!"
 					/>
 				</div>
+			{/if}
+		</div>
+		{#if error}
+			<div class="alert alert-error">
+				{error}
 			</div>
 		{/if}
 	</div>

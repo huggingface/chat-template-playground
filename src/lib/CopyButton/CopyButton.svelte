@@ -50,12 +50,12 @@
 
 {#key isSuccess}
 	<button
-		class="border-gray-500 {classNames}
+		class="border-gray-200 dark:border-gray-700 {classNames}
 		{style !== 'blank' ? 'inline-flex cursor-pointer items-center text-sm focus:outline-hidden' : ''}
 		{['button', 'button-clear'].includes(style) ? 'bg-white dark:bg-gray-900' : ''}
 		{style === 'text' ? 'mx-0.5' : ''}
 		{style === 'button' ? 'btn' : ''}
-		{style === 'button-clear' ? 'rounded-md border p-1 shadow-xs' : ''}
+		{style === 'button-clear' ? 'rounded-md border p-1' : ''}
 		{!isSuccess && ['button-clear', 'text'].includes(style) ? 'text-gray-600' : ''}
 		{isSuccess && style !== 'blank' ? 'text-green-500' : ''}
 	"

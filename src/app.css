@@ -2,6 +2,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Thin subtle scrollbars */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+.dark * {
+	scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
 .codemirror-wrapper {
 	@apply overflow-auto text-sm;
 }
@@ -42,7 +51,7 @@
 
 @utility btn {
 	@apply btn-base;
-	@apply border-gray-200 bg-linear-to-b from-white to-gray-100 text-gray-800 hover:shadow-inner dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:text-gray-200 dark:hover:from-gray-700 dark:hover:to-gray-950;
+	@apply border-gray-200 bg-gray-100 text-gray-800 hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700;
 	&:disabled {
 		@apply cursor-not-allowed opacity-50;
 	}
@@ -53,7 +62,7 @@
 
 @utility btn-widget {
 	@apply btn-base;
-	@apply h-8 bg-linear-to-b from-gray-50 to-gray-200 hover:from-gray-100 hover:to-gray-200 dark:border-gray-800 dark:from-gray-800 dark:to-gray-950 dark:hover:from-gray-700 dark:hover:to-gray-950;
+	@apply h-8 bg-gray-100 hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700;
 	&:disabled {
 		@apply cursor-not-allowed opacity-50;
 	}

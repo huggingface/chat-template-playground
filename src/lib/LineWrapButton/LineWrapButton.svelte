@@ -26,14 +26,14 @@
 
 {#key wrapLines}
 	<button
-		class="border-gray-500 {classNames}
+		class="border-gray-200 dark:border-gray-700 {classNames}
 	{style !== 'blank'
 			? 'inline-flex cursor-pointer items-center justify-center text-sm focus:outline-hidden'
 			: ''}
 	{['button', 'button-clear'].includes(style) ? 'bg-white dark:bg-gray-900 dark:text-white' : ''}
 	{style === 'text' ? 'mx-0.5' : ''}
 	{style === 'button' ? 'btn' : ''}
-	{style === 'button-clear' ? 'rounded-md border p-1 shadow-xs' : ''}
+	{style === 'button-clear' ? 'rounded-md border p-1' : ''}
 "
 		type="button"
 		on:click={toggleWrapLines}

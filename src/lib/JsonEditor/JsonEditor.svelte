@@ -193,13 +193,15 @@
 <div class="h-full overflow-scroll bg-white dark:bg-gray-900">
 	<div class="sticky top-0 z-10 bg-white dark:bg-gray-900">
 		<div
-			class="text-semibold flex items-center gap-x-2 border-b border-gray-500 bg-linear-to-r from-orange-200 to-white px-3 py-1.5 text-lg dark:from-orange-700 dark:to-orange-900 dark:text-gray-200"
+			class="flex items-center gap-x-2 border-b border-gray-200 px-3 py-1.5 dark:border-gray-700"
 		>
-			JSON Input
+			<span class="hidden text-sm font-semibold text-gray-800 sm:inline dark:text-gray-200"
+				>JSON Input</span
+			>
 
 			{#if exampleInputs.length > 1}
 				<select
-					class="ml-auto rounded border px-1 py-0.5 text-sm"
+					class="rounded border border-gray-200 bg-white px-1 py-0.5 text-xs text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400"
 					on:change={handleExampleInputChange}
 				>
 					{#each exampleInputs as exampleInput}
@@ -209,20 +211,21 @@
 					{/each}
 				</select>
 			{/if}
-		</div>
-		<div class="flex items-center border-b px-3 py-2">
+
 			<div class="ml-auto flex items-center gap-x-2">
 				<!-- reset button -->
 				{#if exampleValue && exampleValue !== value}
 					<button
-						class="relative inline-flex h-6! cursor-pointer items-center justify-center rounded-md border border-gray-500 bg-white p-0! px-1.5! text-sm shadow-xs focus:outline-hidden dark:bg-gray-900 dark:text-white [&_svg]:translate-x-px! [&_svg]:translate-y-px! [&_svg]:text-base!"
+						class="relative inline-flex h-6! cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white p-0! px-1.5! text-sm focus:outline-hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white [&_svg]:translate-x-px! [&_svg]:translate-y-px! [&_svg]:text-base!"
 						type="button"
 						on:click={() => {
 							value = exampleValue;
 						}}
 						use:tooltip={'Reset example to original'}
 						><IconRestart classNames="dark:text-gray-200!" />
-						<span class="ml-1 text-sm select-none dark:text-gray-200!"> Reset </span>
+						<span class="ml-1 hidden text-sm select-none sm:inline dark:text-gray-200!">
+							Reset
+						</span>
 					</button>
 				{/if}
 
