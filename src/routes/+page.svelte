@@ -230,7 +230,7 @@
 
 <div
 	id="playground-container"
-	class="relative flex h-screen w-full overflow-hidden border bg-white shadow select-none dark:bg-gray-950"
+	class="relative flex h-screen w-full overflow-hidden bg-white select-none dark:bg-gray-950"
 >
 	<div class="overflow-auto" style="width: {leftWidth}%">
 		{#if formattedTemplates.length}
