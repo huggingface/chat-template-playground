@@ -47,7 +47,7 @@
 				<!-- reset button -->
 				{#if showFormattedTemplate ? selectedTemplate?.formattedTemplate !== selectedTemplate?.formattedTemplateUnedited : selectedTemplate?.template !== selectedTemplate?.templateUnedited}
 					<button
-						class="relative inline-flex h-6! cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white p-0! px-1.5! text-sm focus:outline-hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white [&_svg]:translate-x-px! [&_svg]:translate-y-px! [&_svg]:text-base!"
+						class="relative inline-flex h-6! cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white p-0! px-1.5! text-sm focus:outline-hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white [&_svg]:text-base!"
 						type="button"
 						on:click={() => {
 							if (selectedTemplate) {
@@ -76,7 +76,7 @@
 
 				<!-- format button -->
 				<button
-					class="relative inline-flex h-6! cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white p-0! px-1.5! text-sm focus:outline-hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white [&_svg]:translate-x-px! [&_svg]:translate-y-px! [&_svg]:text-base!"
+					class="relative inline-flex h-6! cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white p-0! px-1.5! text-sm focus:outline-hidden dark:border-gray-700 dark:bg-gray-800 dark:text-white [&_svg]:text-base!"
 					type="button"
 					on:click={() => {
 						showFormattedTemplate = !showFormattedTemplate;
